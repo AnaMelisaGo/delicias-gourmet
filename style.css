@@ -350,7 +350,8 @@ main {
 
 input[type="text"],
 input[type="date"],
-input[type="email"] {
+input[type="email"],
+input[type="password"] {
     padding: 7px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -406,6 +407,21 @@ label {
     cursor: pointer;
 }
 
+/* ----- LOGIN ---------- */
+#login form {
+    /* padding: 5rem; */
+    margin: 0 auto;
+}
+
+.btn-login {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    background: #022423;
+    color: white;
+}
 /* ----- FOOTER ---------- */
 .footer {
     background: #022423;
