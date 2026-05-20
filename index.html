@@ -47,6 +47,7 @@
             <li class="menu-items" onclick="showSection('carta', this)">Nuestra Carta</li>
             <li class="menu-items" onclick="showSection('local', this)">Local</li>
             <li class="menu-items" onclick="showSection('reserva', this)">Reservas</li>
+            <li class="menu-items" onclick="showSection('login', this)">Login</li>
         </ul>
     </nav>
     <!-- main -->
@@ -182,6 +183,24 @@
                     <p>Su solicitud de reserva ha sido enviada con éxito.</p>
                     <button class="reset-form" id="resetBtn">Realizar otra reserva</button>
                 </div>
+            </div>
+        </section>
+
+        <!-- LOGIN -->
+        <section id="login" class="section" style="display:none;">
+            <h4>Login</h4>
+            <div class="form-container">
+                <form action="#">
+                    <div class="input-container">
+                        <label for="username">Usuario</label>
+                        <input type="text" name="username" id="username" placeholder="Su nombre de usuario">
+                    </div>
+                    <div class="input-container">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+                    </div>
+                    <button class="btn-login">Iniciar sesión</button>
+                </form>
             </div>
         </section>
     </main>
