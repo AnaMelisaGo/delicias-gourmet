@@ -422,6 +422,17 @@ label {
     background: #022423;
     color: white;
 }
+
+.small-text {
+    font-size: 0.75rem;
+    margin-top: 10px;
+}
+
+.link-registro {
+    font-weight: 700;
+    color: #022423;
+}
+
 /* ----- FOOTER ---------- */
 .footer {
     background: #022423;
