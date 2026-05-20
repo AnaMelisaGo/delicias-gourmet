@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- js -->
+     <script src="script.js" defer></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/4b85c8c3ab.js" crossorigin="anonymous"></script>
+    <!-- title -->
+    <title>Restaurante Delicias Gourmet</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <button class="carousel-button prev" onclick="moverCarousel(-1)">&#10094</button>
+        <div class="carousel-container">
+            <div id="miCarousel" class="carousel">
+                <img src="images/hero-plato-estrella.avif" alt="Plato estrella" class="active">
+                <img src="images/hero-plato-croquetas.avif" alt="Plato de croquetas caseras">
+                <img src="images/hero-taco-arrachera.avif" alt="Taco arrachera con salsa y guarnición">
+                <img src="images/hero-rollitos-primavera.avif" alt="Rollitos mexicanos de primavera">
+            </div>
+        </div>
+        <div class="titulo">
+            <h1>Delicias Gourmet</h1>
+            <p class="subtitulo">Donde el mar se encuentra con el fuego</p>
+        </div>
+        <button class="carousel-button next" onclick="moverCarousel(1)">&#10095</button>
+    </header>
+    <nav>
+        <!-- menu hamburguesa -->
+        <div id="burger" class="hamburger">
+            <span id="span-1"></span>
+            <span id="span-2"></span>
+            <span id="span-3"></span>
+        </div>
+        <!-- menú nav -->
+        <ul id="menu" class="menu hidden">
+            <li class="menu-items active" onclick="showSection('inicio', this)">Inicio</li>
+            <li class="menu-items" onclick="showSection('carta', this)">Nuestra Carta</li>
+            <li class="menu-items" onclick="showSection('local', this)">Local</li>
+            <li class="menu-items" onclick="showSection('reserva', this)">Reservas</li>
+        </ul>
+    </nav>
+    <!-- main -->
+    <main>
+        <!-- INICIO -->
+        <section id="inicio" class="section">
+            <article>
+                <h3>Bienvenido a Delicias Gourmet</h3>
+                <p>
+                    En nuestro restaurante, la cocina mexicana se reinventa desde su origen más puro: <span>el mar y el fuego</span>. Cada plato nace del respeto por el producto, combinando la frescura vibrante del aguachile con la intensidad y profundidad de los tacos a la brasa.
+                </p>
+                <p>
+                    Inspirados en la tradición del <span>Pacífico mexicano</span> y llevados a una expresión contemporánea, ofrecemos una experiencia gastronómica donde el equilibrio entre acidez, picante y textura se convierte en protagonista.
+                </p>
+                <p>
+                    Al frente de la cocina se encuentra el chef <span>Alejandro Ibarra</span>, formado entre México y España, con experiencia en cocinas de autor y una profunda conexión con los sabores de su tierra natal, <span>Sinaloa</span>. Su propuesta nace de la memoria y la técnica: rescatar recetas del Pacífico y reinterpretarlas con una mirada moderna, cuidando cada detalle desde el producto hasta la presentación.
+                </p>
+                <p>
+                    Aquí, cada bocado es un viaje: crudo, intenso y <span>auténtico</span>. Bienvenido a una nueva forma de entender México.
+                </p>
+            <figure class="main-images">
+                <img src="images/inicio-aguachile-verde.avif" alt="Aguachile verde">
+                <img src="images/inicio-pate-camaron-totopos.avif" alt="Pate de camarón con totopos">
+            </figure>
+        </section>
+
+        <!-- NUESTRA CARTA -->
+        <section id="carta" class="section"  style="display:none;">
+            <h3>Nuestra carta</h3>
+            <article class="card-container">
+                <div>
+                    <div class="card">
+                        <div class="img-container">
+                            <img src="images/carta-aguachile-zamburinas.jpg" alt="Oso Pardo">
+                        </div>
+                        <div class="card-body">
+                            <h4>Aguachile de zamburiñas y camarón</h4>
+                            <small>21€</small>
+                            <p>
+                                Una fusión vibrante combinando México del Pacífico con el producto gallego, macerando marisco crudo en zumo de limón, chiles, cilantro, pepino y cebolla morada.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <img src="images/carta-guacamole.png" alt="Guacamole con totopos">
+                        </div>
+                        <div class="card-body">
+                            <h4>Guacamole con Totopos</h4>
+                            <small>12€</small>
+                            <p>
+                                Salsa tradicional de origen mexicano a base de aguacate, tomate, cebolla y cilantro. Se sirve con totopos de maíz tostados para disfrutar este plato.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <img src="images/carta-tacos-gobernador.jpg" alt="Tacos Gobernador">
+                        </div>
+                        <div class="card-body">
+                            <h4>Tacos del Gobernador</h4>
+                            <small>15€ (4 unidades)</small>
+                            <p>
+                                Especialidad sinaloense que combina lo mejor de un taco de mariscos con la textura fundida de una quesadilla. Se sirve con salsa de chile y cebolla.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <img src="images/carta-huevos-rancheros.avif" alt="Huevos rancheros">
+                        </div>
+                        <div class="card-body">
+                            <h4>Huevos Rancheros</h4>
+                            <small>12€</small>
+                            <p>
+                                Tortilla de maíz con huevos, tomate picaditos y bacon tostado por encima. Ideal para comenzar el día con energía.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- GALERÍA -->
+        <section id="local" class="section" style="display:none;">
+            <h3>Galería del local</h3>
+            <div class="imagen-grande">
+                <img src="images/galeria-barra.jpg" alt="Imagenes del local">
+            </div>
+            <div class="imagen-miniaturas">
+                <img src="images/galeria-barra.jpg" alt="Barra del restaurante" class="active" onclick="mostrarImagen(this.src)">
+                <img src="images/galeria-salon.avif" alt="Salón y entrada del restaurante" onclick="mostrarImagen(this.src)">
+                <img src="images/galeria-mesa.avif" alt="Mesa del restaurante" onclick="mostrarImagen(this.src)">
+                <img src="images/galeria-mesa-sala.jpg" alt="Sala principal con mesa grande" onclick="mostrarImagen(this.src)">
+                <img src="images/galeria-cocina-restaurante.avif" alt="Cocina amplia del restaurante" onclick="mostrarImagen(this.src)">
+                <img src="images/galeria-mesa-bebidas.jpg" alt="Mesa con bebidas estrella del restaurante" onclick="mostrarImagen(this.src)">
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="reserva" class="section" style="display:none;">
+            <h4>Reservas</h4>
+            <!-- Formulario -->
+            <div class="form-container" id="formContainer">
+                <form class="contact-form" id="contactForm">
+                    <fieldset>
+                        <legend>Datos de la reserva</legend>
+                        <div class="input-container">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellidos">
+                            <p class="error" id="errorNombre"></p>
+                        </div>
+                        <div class="input-container">
+                            <label for="email">Email:</label>
+                            <input type="text" name="email" id="email" placeholder="ejemplo@correo.com">
+                            <p class="error" id="errorEmail"></p>
+                        </div>
+                        <div class="input-container">
+                            <label for="fecha">Fecha de la reserva:</label>
+                            <input type="date" name="fecha" id="fecha">
+                            <p class="error" id="errorFecha"></p>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Enviar reserva</button>
+                    </fieldset>
+                </form>
+            </div>
+            <!-- Mensaje -->
+            <div id="contenedorMensaje" style="display: none;">
+                <div class="mensaje-exito">
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <p>Su solicitud de reserva ha sido enviada con éxito.</p>
+                    <button class="reset-form" id="resetBtn">Realizar otra reserva</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Exámen realizado por <span>Melisa Gadingan Orpilla</span> - 2026</p>
+    </footer>
+</body>
+</html>
