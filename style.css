@@ -407,6 +407,14 @@ label {
     cursor: pointer;
 }
 
+.reserva-mensaje {
+    height: 100px;
+    resize: none;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
 /* ----- LOGIN ---------- */
 #login form {
     /* padding: 5rem; */
