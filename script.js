@@ -104,11 +104,13 @@ form.addEventListener('submit', (event) => {
     const nombre = document.getElementById('nombre').value.trim();
     const email = document.getElementById('email').value.trim();
     const fecha = document.getElementById('fecha').value;
+    const persona = document.getElementById('persona').value;
 
     // Contenedores de mensajes error
     const errorNombre = document.getElementById('errorNombre');
     const errorEmail = document.getElementById('errorEmail');
     const errorFecha = document.getElementById('errorFecha');
+    const errorPersona = document.getElementById('errorPersona');
 
     // email regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -117,6 +119,7 @@ form.addEventListener('submit', (event) => {
     errorNombre.textContent = '';
     errorEmail.textContent = '';
     errorFecha.textContent = '';
+    errorPersona.textContent = '';
 
     let esValido = true;
 
@@ -132,6 +135,11 @@ form.addEventListener('submit', (event) => {
 
     if (fecha === '') {
         errorFecha.textContent = 'Por favor, ponga ó seleccione la fecha que desea.';
+        esValido = false;
+    }
+
+    if (persona === '' || persona < 1 || persona > 20) {
+        errorPersona.textContent = 'Por favor, introduzca un número válido de personas (1-20).';
         esValido = false;
     }
 
