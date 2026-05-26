@@ -461,6 +461,11 @@ label {
     font-style: normal;
 }
 
+.footer-msg {
+    font-style: italic;
+    margin-top: 10px;
+}
+
 /* ----- ANIMACIÓN ---------- */
 @keyframes pulse {
     0% {
